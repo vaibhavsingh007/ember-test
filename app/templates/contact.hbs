@@ -1,25 +1,27 @@
 <h1>Contact Page</h1>
 
-<div class="form-group">
-    <label for="formGroupExampleInput">Your e-mail</label>
-  {{input type="email" value=emailAddress class="form-control"
-          placeholder="Please type your e-mail address." autofocus="autofocus"}}
-</div>
-<div class="form-group">
-    <label for="formGroupExampleInput2">Message</label>
-  {{input type="text" value=message class="form-control" placeholder="Another input"}}
-  {{#if responseMessage}}
-      <br/>
-      <div class="alert alert-success">{{responseMessage}}</div>
-  {{/if}}
-    <br/>
-  {{#if canSendMsg}}
-      <button {{action 'sendMessage'}} class="btn btn-primary btn-lg btn-block">
-          Send Message
-      </button>
-  {{else}}
-      <button disabled class="btn btn-primary btn-lg btn-block">
-          Send Message
-      </button>
-  {{/if}}
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="formGroupExampleInput">Your e-mail</label>
+      {{input type="email" value=model.email class="form-control"
+              placeholder="Please type your e-mail address." autofocus="autofocus"}}
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Message</label>
+      {{input type="text" value=model.message class="form-control" placeholder="Another input"}}
+      {{#if responseMessage}}
+          <br/>
+          <div class="alert alert-success">{{responseMessage}}</div>
+      {{/if}}
+        <br/>
+      {{#if canSendMsg}}
+          <button {{action 'sendMessage' model}} class="btn btn-primary btn-lg btn-block">
+              Send Message
+          </button>
+      {{else}}
+          <button disabled class="btn btn-primary btn-lg btn-block">
+              Send Message
+          </button>
+      {{/if}}
+    </div>
 </div>
