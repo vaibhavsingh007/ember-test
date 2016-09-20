@@ -19,6 +19,9 @@ export default Ember.Controller.extend({
           this.set('message', '');
           this.set('emailAddress', '');
 
+          // This is what ES6's lambda syntax is handling in the
+          //..background for us. So feel free to use 'this' normally
+          //..when using lambdas.
           let that = this;
           Ember.run.later((function() {
             //do something in here that will run in 2 seconds
