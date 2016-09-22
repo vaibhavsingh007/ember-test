@@ -1,7 +1,31 @@
 # Library-app
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+Concepts covered
+================
+
+- Ember model, caching and architecture 
+(UI -> Store -> Adapter -> Server)
+https://guides.emberjs.com/v2.8.0/models/#toc_caching
+
+- Ember-cli, scaffolding
+  -> ember g model/route/template/controller/component
+- Models, Templates, Controllers, Components, Routes, Router
+- Computed and Observers
+- Lexical scope: this and that
+- Heavy use of WS
+- 'actions', transitions
+- CRUD actions and URL conventions
+- Ember Data
+- Firebase
+- Yet to be covered: 
+
+Using Ember.RSVP.hash() to retrieve multiple models in the same route
+
+summary of route hooks
+
+
 
 ## Prerequisites
 
